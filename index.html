@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Creative graphic designer portfolio showcasing branding, editorial, illustration and digital design work." />
+  <title>ANUJ — Creative Designer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="anim.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════ CURSOR ═══════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════ NOISE OVERLAY ═══════════════ -->
+  <div class="noise-overlay"></div>
+
+  <!-- ═══════════════ PRELOADER ═══════════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-label">Loading</span>
+      <div class="preloader-bar">
+        <div class="preloader-progress" id="preloaderProgress"></div>
+      </div>
+      <span class="preloader-count" id="preloaderCount">0%</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav" id="nav">
+    <a class="nav__logo" href="#hero" id="navLogo">
+      <span class="logo-block">A</span>NUJ
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" class="nav__link" id="navAbout">About</a></li>
+      <li><a href="#work" class="nav__link" id="navWork">Work</a></li>
+      <li><a href="#skills" class="nav__link" id="navSkills">Skills</a></li>
+      <li><a href="#contact" class="nav__link" id="navContact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--outline" id="navCTA">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <ul>
+      <li><a href="#about" class="mobile-link" id="mAbout">About</a></li>
+      <li><a href="#work" class="mobile-link" id="mWork">Work</a></li>
+      <li><a href="#skills" class="mobile-link" id="mSkills">Skills</a></li>
+      <li><a href="#contact" class="mobile-link" id="mContact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <div class="hero__tag reveal">— Graphic Designer</div>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">CREATIVE</span>
+        <span class="hero__title-line hero__title-line--outline">DESIGN</span>
+        <span class="hero__title-line">STUDIO</span>
+      </h1>
+      <p class="hero__sub reveal">Turning bold ideas into visual stories. Branding · Editorial · Illustration · Motion
+      </p>
+      <div class="hero__ctas reveal">
+        <a href="#work" class="btn btn--primary" id="heroViewWork">View Work</a>
+        <a href="#contact" class="btn btn--ghost" id="heroContact">Get in Touch</a>
+      </div>
+      <div class="hero__scroll-hint reveal">Scroll ↓</div>
+    </div>
+    <div class="hero__visual reveal">
+      <div class="hero__img-wrap">
+        <img src="assets/hero.png" alt="Creative designer illustration" class="hero__img" id="heroImg" />
+        <div class="hero__badge hero__badge--1">✦ Branding</div>
+        <div class="hero__badge hero__badge--2">✦ Video Editing</div>
+        <div class="hero__badge hero__badge--3">✦ Thumbnail</div>
+      </div>
+    </div>
+
+    <!-- floating shapes -->
+    <div class="shape shape--star">✦</div>
+    <div class="shape shape--dot"></div>
+    <div class="shape shape--ring"></div>
+  </section>
+
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Branding</span><span>✦</span>
+      <span>Editorial</span><span>✦</span>
+      <span>Illustration</span><span>✦</span>
+      <span>Typography</span><span>✦</span>
+      <span>Video Editing</span><span>✦</span>
+      <span>UI/UX</span><span>✦</span>
+      <span>Photography</span><span>✦</span>
+      <span>Art Direction</span><span>✦</span>
+      <span>Branding</span><span>✦</span>
+      <span>Editorial</span><span>✦</span>
+      <span>Illustration</span><span>✦</span>
+      <span>Typography</span><span>✦</span>
+      <span>Video Editing</span><span>✦</span>
+      <span>UI/UX</span><span>✦</span>
+      <span>Photography</span><span>✦</span>
+      <span>Art Direction</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__left reveal">
+        <div class="section-label">— About Me</div>
+        <h2 class="section-title">I Design with<br /><em>Purpose</em> &amp; Passion</h2>
+        <p class="about__text">Hi, I'm <strong>Anuj</strong> — a graphic designer and a collage student . I make
+          posters, logos, etc. with a love for bold typography, vivid color, and storytelling through visuals. I've
+          worked across collage club, editorial, digital, and illustration
+          to
+          craft experiences that resonate.</p>
+        <p class="about__text">My work balances aesthetic beauty with strategic thinking — every pixel has a reason.</p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num" data-target="5" id="statProjects">0</span>
+            <span class="stat__label">Projects Done</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-target="2" id="statYears">0</span>
+            <span class="stat__label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-target="15" id="statClients">0</span>
+            <span class="stat__label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__right reveal">
+        <div class="about__img-wrap">
+          <div class="about__img-frame">
+            <img src="assets/skills.png" alt="Design skills overview" class="about__img" />
+          </div>
+          <div class="about__deco-dot"></div>
+          <div class="about__deco-star">✦</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WORK ═══════════════ -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="work__header reveal">
+        <div class="section-label">— Selected Work</div>
+        <h2 class="section-title">Projects that<br /><em>Speak</em> for Themselves</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="work__filters reveal" id="workFilters">
+        <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="branding" id="filterBranding">Branding</button>
+        <button class="filter-btn" data-filter="illustration" id="filterIllustration">Illustration</button>
+        <button class="filter-btn" data-filter="movies" id="filterMovies">Movies</button>
+        <button class="filter-btn" data-filter="commercial" id="filterCommercial">Commercial</button>
+        <span class="tbc-box">and many moreee...</span>
+      </div>
+
+      <!-- Projects grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Branding 1 — featured -->
+        <article class="project-card project-card--featured" data-category="branding" id="projBrand1">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Branding/proj_branding.png" alt="Branding Project" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Branding</span>
+              <h3 class="project-card__title">Brand Identity<br />Project</h3>
+              <p class="project-card__desc">A bold visual identity system built from the ground up — logo, palette &amp;
+                typography.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj1CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">01</div>
+        </article>
+
+        <!-- Branding 2 -->
+        <article class="project-card" data-category="branding" id="projBrand2">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Branding/Organiser.jpg" alt="Organiser Branding" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Branding</span>
+              <h3 class="project-card__title">Organiser<br />Brand Design</h3>
+              <p class="project-card__desc">Clean &amp; structured brand design for a productivity organiser product.
+              </p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj2CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">02</div>
+        </article>
+
+        <!-- Branding 3 -->
+        <article class="project-card" data-category="branding" id="projBrand3">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Branding/front.png" alt="Front Brand Mockup" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Branding</span>
+              <h3 class="project-card__title">Front Cover<br />Brand Mockup</h3>
+              <p class="project-card__desc">Product front mockup showcasing cohesive branding and print-ready layout.
+              </p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj3CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">03</div>
+        </article>
+
+        <!-- Branding 4 -->
+        <article class="project-card" data-category="branding" id="projBrand4">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Branding/side.png" alt="Side Packaging" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Branding</span>
+              <h3 class="project-card__title">Side Panel<br />Packaging</h3>
+              <p class="project-card__desc">Side-panel packaging with detailed typography and brand consistency.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj4CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">04</div>
+        </article>
+
+        <!-- Illustration -->
+        <article class="project-card project-card--hidden" data-category="illustration" id="projIllus1">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Illustration/poster.jpg" alt="Illustration Poster" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Illustration</span>
+              <h3 class="project-card__title">Creative<br />Poster Art</h3>
+              <p class="project-card__desc">Expressive illustrated poster blending bold colour, type and visual
+                storytelling.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj5CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">05</div>
+        </article>
+
+        <!-- Movies 1 -->
+        <article class="project-card project-card--hidden" data-category="movies" id="projMovies1">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Movies/Batman poster.png" alt="Batman Fan Poster" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Movies</span>
+              <h3 class="project-card__title">Batman<br />Fan Poster</h3>
+              <p class="project-card__desc">Cinematic fan-art poster — dramatic lighting, bold contrast and typographic
+                treatment.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj6CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">06</div>
+        </article>
+
+        <!-- Movies 2 -->
+        <article class="project-card project-card--hidden" data-category="movies" id="projMovies2">
+          <div class="project-card__img-wrap">
+            <img src="Assets/Movies/fight clubb.png" alt="Fight Club Fan Poster" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Movies</span>
+              <h3 class="project-card__title">Fight Club<br />Fan Poster</h3>
+              <p class="project-card__desc">Gritty fan poster — raw energy channelled through distressed visuals and
+                type.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj7CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">07</div>
+        </article>
+
+        <!-- Commercial 1 -->
+        <article class="project-card project-card--hidden" data-category="commercial" id="projComm1">
+          <div class="project-card__img-wrap">
+            <img src="Assets/commercial/sony.png" alt="Sony Ad Campaign" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Commercial</span>
+              <h3 class="project-card__title">Sony<br />Ad Campaign</h3>
+              <p class="project-card__desc">Sleek commercial design for Sony — high-impact visual language for print
+                &amp; digital.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj8CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">08</div>
+        </article>
+
+        <!-- Commercial 2 -->
+        <article class="project-card project-card--hidden" data-category="commercial" id="projComm2">
+          <div class="project-card__img-wrap">
+            <img src="Assets/commercial/sprite.png" alt="Sprite Ad Design" class="project-card__img" />
+            <div class="project-card__overlay">
+              <span class="project-card__category">Commercial</span>
+              <h3 class="project-card__title">Sprite<br />Ad Design</h3>
+              <p class="project-card__desc">Vibrant Sprite ad concept — refreshing colour, energetic composition and
+                punchy layout.</p>
+              <!-- <a href="#" class="btn btn--primary project-card__cta" id="proj9CTA">View Case →</a> -->
+            </div>
+          </div>
+          <div class="project-card__num">09</div>
+        </article>
+
+      </div>
+
+      <!-- View More button -->
+      <div class="work__more-wrap reveal">
+        <button class="btn btn--outline work__more-btn" id="viewMoreBtn">View More ✦</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="skills__header reveal">
+        <div class="section-label">— Expertise</div>
+        <h2 class="section-title">Tools &amp; <em>Skills</em></h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-card reveal" id="skillBranding">
+          <div class="skill-card__icon">🎯</div>
+          <h3 class="skill-card__title">Brand Identity</h3>
+          <p class="skill-card__text">Logo systems, visual identity, brand guidelines, and positioning strategy.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 92%"></div>
+          </div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="skill-card reveal" id="skillTypo">
+          <div class="skill-card__icon">Aa</div>
+          <h3 class="skill-card__title">Typography</h3>
+          <p class="skill-card__text">Type pairing, hierarchy, layout composition, and editorial typesetting.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 88%"></div>
+          </div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-card reveal" id="skillIllus">
+          <div class="skill-card__icon">✏️</div>
+          <h3 class="skill-card__title">Illustration</h3>
+          <p class="skill-card__text">Vector illustration, digital painting, character design, and icon systems.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 40%"></div>
+          </div>
+          <span class="skill-pct">40%</span>
+        </div>
+        <div class="skill-card reveal" id="skillMotion">
+          <div class="skill-card__icon">▶️</div>
+          <h3 class="skill-card__title">Video Editing</h3>
+          <p class="skill-card__text">DaVinci resolve video editing and story telling.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 60%"></div>
+          </div>
+          <span class="skill-pct">60%</span>
+        </div>
+        <div class="skill-card reveal" id="skillPhoto">
+          <div class="skill-card__icon">📷</div>
+          <h3 class="skill-card__title">Photography</h3>
+          <p class="skill-card__text">Product and lifestyle photography, retouching, and visual storytelling.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 70%"></div>
+          </div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-card reveal" id="skillUI">
+          <div class="skill-card__icon">🖥️</div>
+          <h3 class="skill-card__title">UI / UX Design</h3>
+          <p class="skill-card__text">Figma prototyping, user flows, wireframing, and design systems.</p>
+          <div class="skill-bar">
+            <div class="skill-bar__fill" style="--pct: 85%"></div>
+          </div>
+          <span class="skill-pct">85%</span>
+        </div>
+      </div>
+
+      <!-- Tools row -->
+      <div class="tools-row reveal">
+        <div class="section-label" style="margin-bottom: 1.5rem;">— Tools I Use</div>
+        <div class="tools-list">
+          <div class="tool-badge" id="toolAi">DaVinci Resolve</div>
+          <div class="tool-badge" id="toolPs">Adobe Photoshop</div>
+          <!-- <div class="tool-badge" id="toolId">Adobe InDesign</div> -->
+          <div class="tool-badge" id="toolFigma">Figma</div>
+          <!-- <div class="tool-badge" id="toolAe">Adobe After Effects</div> -->
+          <!-- <div class="tool-badge" id="toolPr">Premiere Pro</div> -->
+          <div class="tool-badge" id="toolMid">Canva</div>
+          <!-- <div class="tool-badge" id="toolBlend">Blender</div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner reveal">
+        <div class="contact__left">
+          <div class="section-label">— Get In Touch</div>
+          <h2 class="section-title">Let's Create<br /><em>Something</em> Great</h2>
+          <p class="contact__sub">Have a project in mind? I'd love to hear about it. Drop me a message and let's talk.
+          </p>
+        </div>
+        <div class="contact__right">
+          <div class="contact__links">
+            <a href="mailto:anujrai11986@gmail.com" class="contact__link" id="contactEmail">
+              <span class="contact__link-icon">✉</span>
+              anujrai11986@gmail.com
+            </a>
+            <a href="tel:+91 7303059402" class="contact__link" id="contactPhone">
+              <span class="contact__link-icon">📞</span>
+              +91 7303059402
+            </a>
+          </div>
+          <div class="contact__socials">
+            <a href="https://www.behance.net/vivekrai31" class="social-btn" id="socBehance" aria-label="Behance">
+              <svg width="24" height="24" viewBox="0 0 18 18" fill="currentColor">
+                <path
+                  d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/anujjxii/" class="social-btn" id="socInsta" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.308.06-2.203.268-2.986.572-.809.315-1.494.736-2.179 1.422-.686.686-1.107 1.37-1.422 2.179-.304.783-.512 1.678-.572 2.986-.058 1.281-.072 1.688-.072 4.947s.014 3.667.072 4.947c.06 1.308.268 2.203.572 2.986.315.809.736 1.494 1.422 2.179.686.686 1.37 1.107 2.179 1.422.783.304 1.678.512 2.986.572 1.281.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.308-.06 2.203-.268 2.986-.572.809-.315 1.494-.736 2.179-1.422.686-.686 1.107-1.37 1.422-2.179.304-.783.512-1.678.572-2.986.058-1.281.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.06-1.308-.268-2.203-.572-2.986-.315-.809-.736-1.494-1.422-2.179-.686-.686-1.107-1.37-1.422-2.179-.304-.783-.512-1.678-.572-2.986-.058-1.281-.072-1.688-.072-4.947s.014-3.667.072-4.947zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/anuj-rai-a458b8385/" class="social-btn" id="socLinkedIn"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://www.figma.com/@anujjxii" class="social-btn" id="socFigma" aria-label="Figma">
+              <svg width="24" height="24" viewBox="0 0 256 256" id="figma">
+                <circle cx="162" cy="128" r="34" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="12"></circle>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+                  d="M128,94V26.00089H94a34,34,0,0,0,0,68Z"></path>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+                  d="M128 161.99911V94H94a34 34 0 0 0 0 68zM128 94V26.00089h34a34 34 0 0 1 0 68z"></path>
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+                  d="M128,161.99911v34.00044A34,34,0,1,1,94,162Z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <span class="footer__logo">ANUJ</span>
+      <span class="footer__copy">© 2024 Anuj. Crafted with love ❤️
+      </span>
+      <a href="#hero" class="footer__back-top" id="backToTop">↑ Back to Top</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox__close" id="lightboxClose">&times;</span>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Previous">❮</button>
+    <img class="lightbox__content" id="lightboxImg" src="" alt="">
+    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next">❯</button>
+    <div id="lightboxCaption" class="lightbox__caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
