@@ -144,11 +144,66 @@ const success = document.getElementById('formSuccess');
 if (form && success) {
   form.addEventListener('submit', e => {
     e.preventDefault();
-    success.classList.add('show');
-    form.reset();
-    setTimeout(() => success.classList.remove('show'), 4000);
+    
+    // Change button text while sending
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        success.style.color = "var(--teal)";
+        success.style.borderColor = "var(--teal)";
+        success.innerHTML = "Message sent successfully!";
+        success.classList.add('show');
+        form.reset();
+      } else {
+        console.log(response);
+        success.style.color = "var(--red)";
+        success.style.borderColor = "var(--red)";
+        success.innerHTML = json.message || "Something went wrong!";
+        success.classList.add('show');
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      success.style.color = "var(--red)";
+      success.style.borderColor = "var(--red)";
+      success.innerHTML = "Something went wrong!";
+      success.classList.add('show');
+    })
+    .finally(() => {
+      submitBtn.textContent = originalText;
+      setTimeout(() => success.classList.remove('show'), 5000);
+    });
   });
 }
+
+// ═══ Scroll Progress Bar ═══
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTotal = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPosition = (scrollTotal / height) * 100;
+  if (scrollProgress) {
+    scrollProgress.style.width = scrollPosition + '%';
+  }
+});
+
+
 
 // ═══ Smooth anchor scroll ═══
 document.querySelectorAll('a[href^="#"]').forEach(a => {

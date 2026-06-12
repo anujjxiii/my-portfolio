@@ -25,6 +25,23 @@ html {
   font-size: 16px;
 }
 
+/* ── Hide Scrollbar ─────────────────────────── */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Scroll Progress Bar ──────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--red);
+  width: 0%;
+  z-index: 10000;
+  pointer-events: none;
+}
+
 body {
   background: var(--dark);
   color: var(--cream);
