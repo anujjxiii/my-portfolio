@@ -232,7 +232,7 @@ body {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1001;
   background: var(--mid);
   display: flex;
   flex-direction: column;
